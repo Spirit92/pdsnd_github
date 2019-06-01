@@ -85,6 +85,8 @@ def load_data(city, month, day):
         
     return df
 
+def common_month(df):
+    print('Most Popular Month:', MONTHS[df['Month'].mode()[0]].title())
 
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
@@ -95,7 +97,7 @@ def time_stats(df):
     ### Approach like in the "Practice Problem/Solution #1".
     
     # TO DO: display the most common month
-    print('Most Popular Month:', MONTHS[df['Month'].mode()[0]].title())
+    common_month(df)
 
     # TO DO: display the most common day of week
     print('Most Popular Day Of Week:', df['Day Of Week'].mode()[0])
