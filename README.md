@@ -5,7 +5,14 @@
 Bikeshare Data Analyzer
 
 ### Description
-Describe what your project is about and what it does
+The application allows to compute the following statistics (from Udacity Classroom):
+>1 Popular times of travel (i.e., occurs most often in the start time)
+
+>2 Popular stations and trip
+
+>3 Trip duration
+
+>4 User info
 
 ### Files used
 * `bikeshare.py` - source code
