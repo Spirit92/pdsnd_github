@@ -85,6 +85,8 @@ def load_data(city, month, day):
         
     return df
 
+def common_month(df):
+    print('Most Popular Month:', MONTHS[df['Month'].mode()[0]].title())
 
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
@@ -95,7 +97,7 @@ def time_stats(df):
     ### Approach like in the "Practice Problem/Solution #1".
     
     # display the most common month
-    print('Most Popular Month:', MONTHS[df['Month'].mode()[0]].title())
+    common_month(df)
 
     # display the most common day of week
     print('Most Popular Day Of Week:', df['Day Of Week'].mode()[0])
@@ -107,6 +109,8 @@ def time_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+def end_station(df):
+    print('Most Popular End Station:', df['End Station'].mode()[0])
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -119,8 +123,8 @@ def station_stats(df):
     # display most commonly used start station
     print('Most Popular Start Station:', df['Start Station'].mode()[0])
 
-    # display most commonly used end station
-    print('Most Popular End Station:', df['End Station'].mode()[0])
+    # call function to display most commonly used end station
+    end_station(df)
 
     # display most frequent combination of start station and end station trip
     df['Station Combination'] = df['Start Station'] + ' -> ' + df['End Station']
@@ -205,6 +209,7 @@ def display_raw_data(df):
                 break
 
 def main():
+    print("Welcome in BikeShare Analyzer!")
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
