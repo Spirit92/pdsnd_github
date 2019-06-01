@@ -94,13 +94,13 @@ def time_stats(df):
 
     ### Approach like in the "Practice Problem/Solution #1".
     
-    # TO DO: display the most common month
+    # display the most common month
     print('Most Popular Month:', MONTHS[df['Month'].mode()[0]].title())
 
-    # TO DO: display the most common day of week
+    # display the most common day of week
     print('Most Popular Day Of Week:', df['Day Of Week'].mode()[0])
 
-    # TO DO: display the most common start hour
+    # display the most common start hour
     df['Start Hour'] = df['Start Time'].dt.hour
     print('Most Popular Start Hour:', df['Start Hour'].mode()[0])
 
@@ -116,13 +116,13 @@ def station_stats(df):
 
      ### Solution similar to the "Practice Problem/Solution #1"
     
-    # TO DO: display most commonly used start station
+    # display most commonly used start station
     print('Most Popular Start Station:', df['Start Station'].mode()[0])
 
-    # TO DO: display most commonly used end station
+    # display most commonly used end station
     print('Most Popular End Station:', df['End Station'].mode()[0])
 
-    # TO DO: display most frequent combination of start station and end station trip
+    # display most frequent combination of start station and end station trip
     df['Station Combination'] = df['Start Station'] + ' -> ' + df['End Station']
     print('Most Popular Combination Of Start-End Stations:', df['Station Combination'].mode()[0])
 
@@ -136,10 +136,10 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
+    # display total travel time
     print('The Total Travel Time:', df['Trip Duration'].sum()/60/60, 'hours')
 
-    # TO DO: display mean travel time
+    # display mean travel time
     print('The Mean Travel Time:', df['Trip Duration'].mean()/60, 'minutes')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -152,7 +152,7 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # TO DO: Display counts of user types
+    # Display counts of user types
     user_types = df['User Type'].value_counts()
     print('Counts Of User Types:')
     for k, v in user_types.items():
@@ -160,7 +160,7 @@ def user_stats(df):
 
     ### Gender and Birth Year need to be checked if they exist in data.
         
-    # TO DO: Display counts of gender
+    # Display counts of gender
     print('\nCounts Of User Gender:')
     if 'Gender' in df.columns:
         gender = df['Gender'].value_counts()
@@ -170,7 +170,7 @@ def user_stats(df):
         print("Data is not available.")
                 
 
-    # TO DO: Display earliest, most recent, and most common year of birth
+    # Display earliest, most recent, and most common year of birth
     print('\nBirth Statistics:')
     if 'Birth Year' in df.columns:
         print('Earliest Year Of Birth:', df['Birth Year'].min())
