@@ -205,6 +205,7 @@ def display_raw_data(df):
                 break
 
 def main():
+    print("Welcome in BikeShare Analyzer!")
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
