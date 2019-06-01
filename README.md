@@ -8,7 +8,8 @@ Bikeshare Data Analyzer
 Describe what your project is about and what it does
 
 ### Files used
-Include the files used
+* `bikeshare.py` - source code
+* provide data files to analyze in `.csv` format - not in the repository
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
